@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 
+//Fatura - a ser exibida no final.
 namespace POO_TarefaInterfaces.Entities
 {
     class Invoice
@@ -20,23 +21,14 @@ namespace POO_TarefaInterfaces.Entities
         }
         public override string ToString()
         {
-            return "Basic payment: "
+            return 
+            "Pagamento básico: "
             + BasicPayment.ToString("F2", CultureInfo.InvariantCulture)
-            + "\nTax: "
+            + "\nTaxa: "
             + Tax.ToString("F2", CultureInfo.InvariantCulture)
-            + "\nTotal payment: "
+            + "\nPagamento total: "
             + TotalPayment.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
-namespace Course.Entities
-{
-    class Vehicle
-    {
-        public string Model { get; set; }
-        public Vehicle(string model)
-        {
-            Model = model;
-        }
-    }
-}
+
